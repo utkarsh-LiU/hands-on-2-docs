@@ -104,7 +104,7 @@ def analyze_N2(distance):
     print("Atomization energy: %5.2f eV" % N2.atomization_energy())
 
 
-def analyze_experimental_N2():
+def analyze_exp_N2():
     """Print out an energy analysis an N2 molecule with a
     bond length of 1.1 Å as found in experiments.
     """
