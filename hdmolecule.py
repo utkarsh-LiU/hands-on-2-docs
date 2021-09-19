@@ -22,7 +22,7 @@
 # SOFTWARE.
 
 """
-This file defines the HDMolecule class closely inspired by one
+This module defines the HDMolecule class closely inspired by one
 of the ASE example at: https://wiki.fysik.dtu.dk/ase/tutorials/atomization.html
 
 It also provides a couple of example functions to show how to use this class.
