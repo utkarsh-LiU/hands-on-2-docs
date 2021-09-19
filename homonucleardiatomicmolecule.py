@@ -25,7 +25,7 @@
 This file defines the HomonuclearDiatomicMolecule class closely inspired by one
 of the ASE example at: https://wiki.fysik.dtu.dk/ase/tutorials/atomization.html
 
-It also provides an example function to show how to use the
+It also provides a couple of example functions to show how to use the
 HomonuclearDiatomicMolecule class.
 """
 
@@ -96,10 +96,19 @@ class HomonuclearDiatomicMolecule:
         return (2 * e_atom) - e_molecule
 
 
-def analyze_N2():
+def analyze_N2(distance):
 
-    N2 = HomonuclearDiatomicMolecule("N", 1.1)
+    N2 = HomonuclearDiatomicMolecule("N", distance)
 
     print("Nitrogen atom energy: %5.2f eV" % N2.atom_energy())
     print("Nitrogen molecule energy: %5.2f eV" % N2.molecule_energy())
     print("Atomization energy: %5.2f eV" % N2.atomization_energy())
+
+
+def analyze_experimental_N2():
+    """Print out an energy analysis an N2 molecule with a
+    bond length of 1.1 Å as found in experiments.
+    """
+    exp_bond_length = 1.1
+
+    analyze_N2(exp_bond_length)
