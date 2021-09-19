@@ -22,20 +22,19 @@
 # SOFTWARE.
 
 """
-This file defines the HomonuclearDiatomicMolecule class closely inspired by one
+This file defines the HDMolecule class closely inspired by one
 of the ASE example at: https://wiki.fysik.dtu.dk/ase/tutorials/atomization.html
 
-It also provides a couple of example functions to show how to use the
-HomonuclearDiatomicMolecule class.
+It also provides a couple of example functions to show how to use this class.
 """
 
 from ase import Atoms
 from ase.calculators.emt import EMT
 
 
-class HomonuclearDiatomicMolecule:
-    """A HomonuclearDiatomicMolecule is a linear molecule that consists of two
-    atoms of the same element.
+class HDMolecule:
+    """A HDMolecule represents a homonuclear diatomic molecule, i.e., a
+    linear molecule that consists of two atoms of the same element.
 
     A homonuclear diatomic molecule is fully defined by the element and distance
     between the two atoms.
@@ -45,7 +44,7 @@ class HomonuclearDiatomicMolecule:
     """
 
     def __init__(self, element_symbol, distance):
-        """Create a HomonuclearDiatomicMolecule
+        """Create a HDMolecule
 
         Args:
             element_symbol (string): The chemical element symbol for the element
@@ -98,7 +97,7 @@ class HomonuclearDiatomicMolecule:
 
 def analyze_N2(distance):
 
-    N2 = HomonuclearDiatomicMolecule("N", distance)
+    N2 = HDMolecule("N", distance)
 
     print("Nitrogen atom energy: %5.2f eV" % N2.atom_energy())
     print("Nitrogen molecule energy: %5.2f eV" % N2.molecule_energy())
