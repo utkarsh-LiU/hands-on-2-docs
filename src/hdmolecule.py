@@ -96,7 +96,10 @@ class HDMolecule:
 
 
 def analyze_N2(distance):
-
+    """
+    Given interatomic distance, calculate and print Nitrogen atom energy, Nitrogen molecule energy
+    and Atomization energy for Homonuclear Nitrogen dimer
+    """
     N2 = HDMolecule("N", distance)
 
     print("Nitrogen atom energy: %5.2f eV" % N2.atom_energy())
